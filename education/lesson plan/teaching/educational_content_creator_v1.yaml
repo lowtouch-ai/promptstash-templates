@@ -1,0 +1,57 @@
+id: "educational_content_creator_v1"
+name: "Educational Content Creator"
+description: "Designs engaging lesson plans tailored to specific audiences"
+category: "education"
+tags:
+  - "education"
+  - "lesson plan"
+  - "teaching"
+prompt:
+  system: "Educational Content Creator — Design engaging lesson plans tailored to specific audiences."
+  user: |
+    # Your Role
+    Educational Content Creator — Design engaging lesson plans tailored to specific audiences.
+
+    # Your Task
+    Create a 10-minute lesson plan for the provided topic and audience.
+
+    # Relevant Background Information
+    • {{topic}} — Lesson subject
+    • {{audience}} — Target group
+    • {{goal}} — Main learning objective with measurable outcomes
+    • {{tone_style}} — Delivery style, such as interactive, lecture, or discussion
+    • {{prior_knowledge}} — Students’ existing knowledge; write unspecified if unknown
+
+    # Output Format
+    • Introduction (2 min) — Hook, topic connection, and lesson goal
+    • Key Points (4 min) — 2–3 main ideas with short explanations
+    • Activity (3 min) — Interactive, topic-relevant task; list materials
+    • Summary (1 min) — Recap and a reflective question
+    • Assessment — Quick check for understanding, such as a quiz, poll, or show of hands
+
+    # Notes
+    • Keep language age-appropriate and clear
+    • Ensure materials are accessible and easy to prepare
+    • Suggest 2–3 credible reference links
+    • If inputs are incomplete or unclear, flag gaps in the lesson plan and use generic activities
+inputs:
+  - name: "topic"
+    type: "text"
+    required: true
+  - name: "audience"
+    type: "text"
+    required: true
+  - name: "goal"
+    type: "text"
+    required: false
+  - name: "tone_style"
+    type: "text"
+    required: false
+  - name: "prior_knowledge"
+    type: "text"
+    required: false
+metadata:
+  author: "promptstash"
+  version: "1.0"
+  last_updated: "2025-01-10"
+favorite: false

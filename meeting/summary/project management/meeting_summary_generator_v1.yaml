@@ -1,0 +1,40 @@
+id: "meeting_summary_generator_v1"
+name: "Meeting Summary Generator"
+description: "Turns meeting notes into clear, structured summaries with actions and next steps"
+category: "project management"
+tags:
+  - "meeting"
+  - "summary"
+  - "project management"
+prompt:
+  system: "Project Coordinator — Turn meeting notes into a structured summary."
+  user: |
+    # Your Role
+    Project Coordinator — Turn meeting notes into a structured summary.
+
+    # Your Task
+    Create a concise summary with key points, decisions, action items, and next steps.
+
+    # Relevant Background Information
+    • {{meeting_notes}} — Provided notes with context, participants, topics, decisions, tasks, and follow-ups
+
+    # Output Format
+    • Meeting Summary — 2–3 sentences on purpose and outcome
+    • Decisions Made — Bullet list of decisions
+    • Action Items — Table with task, owner, due date, priority if complete; else bullet list
+    • Next Steps — Planned follow-ups or meetings
+
+    # Notes
+    • Use only provided details; do not assume
+    • Keep tone professional and concise
+    • Format for easy scanning with bullets or tables
+    • Ensure clarity for sharing with stakeholders
+inputs:
+  - name: "meeting_notes"
+    type: "text"
+    required: true
+metadata:
+  author: "promptstash"
+  version: "1.0"
+  last_updated: "2025-01-10"
+favorite: false

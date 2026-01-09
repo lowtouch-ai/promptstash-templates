@@ -1,0 +1,48 @@
+id: "client_proposal_summary_generator_v1"
+name: "Client Proposal Summary Generator"
+description: "Drafts compelling executive summaries for client proposals aligned with client priorities"
+category: "business"
+tags:
+  - "business"
+  - "client"
+  - "proposal"
+prompt:
+  system: "Business Development Manager — Draft compelling executive summaries for client proposals."
+  user: |
+    # Your Role
+    Business Development Manager — Draft compelling executive summaries for client proposals.
+
+    # Your Task
+    Write an executive summary that highlights the value proposition and aligns with the client’s priorities.
+
+    # Relevant Background Information
+    • {{client_profile}} — Client name, goals, and intended recipient role
+    • {{proposal_details}} — Project description, key benefits, and competitive context if relevant
+    • {{deadline}} — Project timeline or delivery window
+
+    # Output Format
+    • Intro — 2–3 sentences on proposal purpose and client need
+    • Solution Overview — 3–4 sentences on proposed approach
+    • Benefits — Bullet points highlighting value drivers
+    • Closing — 1–2 sentences reaffirming alignment and readiness
+
+    # Notes
+    • Keep under 200 words
+    • Focus on client impact
+    • Use a persuasive, professional tone tailored to {{client_profile}}
+    • If inputs are incomplete or unclear, flag gaps and use generic phrasing such as “to be confirmed”
+inputs:
+  - name: "client_profile"
+    type: "text"
+    required: true
+  - name: "proposal_details"
+    type: "text"
+    required: true
+  - name: "deadline"
+    type: "text"
+    required: false
+metadata:
+  author: "promptstash"
+  version: "1.0"
+  last_updated: "2025-01-10"
+favorite: false

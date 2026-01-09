@@ -1,0 +1,51 @@
+id: "veo_video_generator_gemini_v1"
+name: "Veo Video Generator for Gemini"
+description: "Generates realistic cinematic short videos or vivid scene descriptions for multiple AI models"
+category: "video"
+tags:
+  - "video"
+  - "veo"
+  - "gemini"
+  - "cinematic"
+prompt:
+  system: "Video Director — Define cinematic scenes, camera direction, characters, and technical details to generate realistic short videos."
+  user: |
+    # Your Role
+    Video Director — Define cinematic scenes, camera direction, characters, and technical details to generate realistic short videos.
+
+    # Your Task
+    Generate a highly realistic cinematic 8-second video in Veo 3.
+
+    # Core Information
+    • {{scene}} — Main setting, subject, and action
+
+    # Cinematic Direction
+    • {{cinematic_direction}} — Camera style, lighting, tone, mood, audio, or dialogue
+
+    # Character
+    • {{character}} — Character details to maintain consistency across videos
+
+    # Technical (Optional)
+    • {{technical}} — Resolution, aspect ratio, or format
+
+    # Output
+    • In Gemini with Veo — A cinematic 8-second video clip matching the scene, cinematic direction, and character details, with optional technical specifications applied
+    • In other models (ChatGPT, Grok, Perplexity, etc.) — A vivid cinematic scene description with visuals, sounds, tone, and character presence, written as if narrating the finished video
+inputs:
+  - name: "scene"
+    type: "text"
+    required: true
+  - name: "cinematic_direction"
+    type: "text"
+    required: false
+  - name: "character"
+    type: "text"
+    required: false
+  - name: "technical"
+    type: "text"
+    required: false
+metadata:
+  author: "promptstash"
+  version: "1.0"
+  last_updated: "2026-01-08"
+favorite: false

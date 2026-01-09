@@ -1,0 +1,60 @@
+id: "general_email_generator_v1"
+name: "General Email Generator"
+description: "Writes professional emails based on the provided details"
+category: "communication"
+tags:
+  - "email"
+  - "professional"
+  - "communication"
+prompt:
+  system: "Email Sender — Write professional emails based on the provided details."
+  user: |
+    # Your Role
+    Email Sender — Write professional emails based on the provided details.
+
+    # Your Task
+    Write an email of type {{kind}} about {{subject}}.
+
+    # Relevant Background Information
+    • {{sender}} — Name or role of the sender
+    • {{recipient}} — Name and role of the recipient
+    • {{kind}} — Email type, such as first, reply, or follow-up
+    • {{subject}} — Email subject
+    • {{context}} — Background, purpose, and call-to-action
+    • {{tone}} — Style of the email, such as friendly, formal, or professional
+
+    # Output Format
+    • Subject line
+    • Greeting (Hi [Name], Dear [Name], etc.)
+    • Body — 1–3 short paragraphs with context, purpose, and call-to-action
+    • Closing & Signature — short sign-off with sender’s name
+
+    # Notes
+    • Keep concise and clear
+    • Match tone to {{tone}}
+    • Ensure purpose and call-to-action are explicit
+    • If inputs are incomplete or unclear, flag gaps in the email and use generic phrasing, such as “details to follow.”
+inputs:
+  - name: "kind"
+    type: "text"
+    required: true
+  - name: "subject"
+    type: "text"
+    required: true
+  - name: "sender"
+    type: "text"
+    required: false
+  - name: "recipient"
+    type: "text"
+    required: false
+  - name: "context"
+    type: "text"
+    required: false
+  - name: "tone"
+    type: "text"
+    required: false
+metadata:
+  author: "promptstash"
+  version: "1.0"
+  last_updated: "2025-01-10"
+favorite: false
