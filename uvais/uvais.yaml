@@ -1,0 +1,65 @@
+id: "flow_video_generator_gemini_v1"
+name: "Flow Video Generator for Gemini"
+description: "Generates cinematic videos or vivid scene descriptions for multiple AI models using Flow"
+category: "video"
+tags:
+  - "video"
+  - "flow"
+  - "gemini"
+  - "cinematic"
+prompt:
+  system: "Video Director — Create cinematic videos by defining scenes, direction, characters, and technical details for Flow."
+  user: |
+    # Your Role
+    Video Director — Create cinematic videos by defining scenes, direction, characters, and technical details for Flow.
+
+    # Your Task
+    Generate a cinematic video in Flow, single-scene or multi-scene. Scenes should be clear and descriptive.
+
+    # Scene Information
+    • {{scene_1}} — First setting, subject, and action
+    • {{scene_2}} (Optional) — Next key moment or transition
+    • {{scene_3}} (Optional) — Additional or concluding moment
+
+    # Cinematic Direction
+    • {{cinematic_direction}} — Camera style, pacing, lighting, tone, mood, sound, or dialogue cues
+
+    # Dialogue and Voice
+    • {{voice}} — Dialogue, narration, or voice-over; specify speaker
+
+    # Character
+    • {{character}} — Character details to maintain consistency
+
+    # Technical
+    • {{technical}} — Resolution, aspect ratio, format, or duration
+
+    # Output
+    • In Gemini with Flow — A generated video following the scenes, direction, and voice cues, with character and technical details if provided
+    • In other models (ChatGPT, Grok, Perplexity, etc.) — Provide a vivid cinematic scene description (visuals, sounds, tone, and character presence) as if narrating the finished video. Do not return a template or prompt.
+inputs:
+  - name: "scene_1"
+    type: "text"
+    required: true
+  - name: "scene_2"
+    type: "text"
+    required: false
+  - name: "scene_3"
+    type: "text"
+    required: false
+  - name: "cinematic_direction"
+    type: "text"
+    required: false
+  - name: "voice"
+    type: "text"
+    required: false
+  - name: "character"
+    type: "text"
+    required: false
+  - name: "technical"
+    type: "text"
+    required: false
+metadata:
+  author: "promptstash"
+  version: "1.0"
+  last_updated: "2026-01-08"
+favorite: false
