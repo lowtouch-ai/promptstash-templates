@@ -1,0 +1,94 @@
+id: "prompt_template_yaml_generator_v4"
+name: "Prompt Template YAML Generator"
+description: "Converts an optimized prompt into a PromptStash-compatible YAML prompt template with strict structural rules and rich input metadata"
+category: "prompt-engineering"
+tags:
+  - "prompt"
+  - "yaml"
+  - "prompt-engineering"
+  - "template"
+  - "automation"
+prompt:
+  system: "Prompt Engineer — Convert optimized prompts into structured, reusable YAML prompt templates."
+  user: |
+    # Your Role
+    You are an expert Prompt Engineer responsible for converting optimized prompts into clean, reusable PromptStash YAML templates.
+
+    # Your Task
+    Given the optimized prompt below, generate a complete PromptStash-compatible YAML prompt template.
+
+    # Optimized Prompt
+    {{optimized_prompt}}
+
+    # Metadata Inputs
+    • {{author}} — Author or organization responsible for the template  
+    • {{version}} — Template version (for example: 1.0, 1.1, 2.0)
+
+    # YAML Generation Guidelines
+    • Generate a valid YAML document following PromptStash conventions  
+    • Infer a clear and descriptive template name and description  
+    • Select an appropriate category  
+    • Generate relevant tags as a YAML list of strings  
+    • Extract all placeholders wrapped in double curly brackets and define them as inputs  
+    • Do not modify, remove, or rename any placeholders  
+    • For each input, infer a clear, human-readable description based on how the placeholder is used  
+    • Use {{author}} and {{version}} in the metadata section  
+    • Populate last_updated with today’s date in YYYY-MM-DD format  
+    • Separate system and user instructions appropriately  
+    • Ensure the YAML is clean, readable, and consistently formatted  
+
+    # Required YAML Structure
+    The output must include the following sections and formats:
+
+    • id — unique, versioned identifier  
+    • name — human-readable template name  
+    • description — short summary of the template’s purpose  
+    • category — single category string  
+    • tags — YAML list of strings  
+
+    • prompt:
+        - system — system-level instruction string
+        - user — full user prompt text
+
+    • inputs — YAML list of input objects, each with:
+        - name — placeholder name (without curly brackets)
+        - type — input type (for example: text)
+        - required — true or false
+        - description — clear explanation of what the user should provide
+
+      (Exclude {{author}} and {{version}} from inputs unless they appear inside the prompt content itself.)
+
+    • metadata:
+        - author — value from {{author}}
+        - version — value from {{version}}
+        - last_updated — today’s date
+
+    • favorite — boolean, default false
+
+    # Output Rules
+    • Output only the YAML  
+    • Do not include explanations, comments, or markdown wrappers  
+    • Ensure the YAML is ready to be committed directly to a repository  
+
+    # Style and Quality
+    • Professional and production-ready  
+    • Deterministic and reusable  
+    • Consistent with existing PromptStash templates  
+inputs:
+  - name: "optimized_prompt"
+    type: "text"
+    required: true
+    description: "The optimized prompt text to be converted into a PromptStash YAML template"
+  - name: "author"
+    type: "text"
+    required: true
+    description: "Author or organization responsible for the template"
+  - name: "version"
+    type: "text"
+    required: true
+    description: "Version identifier for the generated template"
+metadata:
+  author: "promptstash"
+  version: "4.0"
+  last_updated: "2026-01-16"
+favorite: false
