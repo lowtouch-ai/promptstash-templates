@@ -46,9 +46,10 @@ prompt:
     • description — short summary of the template’s purpose  
     • category — single category string  
     • tags — YAML list of strings  
+    * contibutor — github username of from the author input field without the @ symbol
 
     • prompt:
-        - system — system-level instruction string
+        - system — not used currently keep a brief description or role
         - user — full user prompt text
 
     • inputs — YAML list of input objects, each with:
@@ -83,13 +84,13 @@ inputs:
   - name: "author"
     type: "text"
     required: true
-    description: "Author or organization responsible for the template"
+    description: "Author or organization responsible for the template, inlclude github username if applicable is @githubusername"
   - name: "version"
     type: "text"
     required: true
     description: "Version identifier for the generated template"
 metadata:
-  author: "promptstash"
+  author: "Rejith Krishnan @reith"
   version: "4.0"
   last_updated: "2026-01-16"
 favorite: false
