@@ -8,6 +8,7 @@ tags:
   - "prompt-engineering"
   - "template"
   - "automation"
+contributor: rejith  # Add your GitHub username here
 prompt:
   system: "Prompt Engineer — Convert optimized prompts into structured, reusable YAML prompt templates."
   user: |
