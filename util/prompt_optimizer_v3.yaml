@@ -8,6 +8,7 @@ tags:
   - "prompt-engineering"
   - "analysis"
   - "refactoring"
+contributor: rejith  # Add your GitHub username here
 prompt:
   system: "Prompt Engineer — Analyze and optimize prompts for clarity, efficiency, structure, and reliability while preserving original intent."
   user: |
