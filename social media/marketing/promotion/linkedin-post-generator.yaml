@@ -1,64 +1,74 @@
-id: linkedin-post-generator-0.3
-name: LinkedIn Post Generator with Emojis and Hashtags
-description: Generate an engaging LinkedIn post with emojis and hashtags to enhance visibility and highlight key points.
-category: social-media
+id: linkedin-professional-post-v0.4
+name: LinkedIn Professional Post Generator
+description: Creates concise, authentic LinkedIn posts (180–320 words) that highlight 2–3 key messages with proper tone, audience targeting, emoji formatting, and engaging CTA + niche hashtags.
+category: Social Media
 tags:
   - linkedin
-  - social
   - content-creation
-  - professional
-  - post-generator
-  - emojis
-  - hashtags
+  - professional-writing
+  - personal-branding
+  - thought-leadership
 contributor: rejith
 prompt:
-  system: You are a professional content creator specialized in writing engaging LinkedIn posts that use emojis and hashtags effectively.
-  user: |-
-    Write a professional LinkedIn post about {{topic}}.
+  system: |
+    You are a skilled LinkedIn content writer who produces authentic, engaging, and professional posts that resonate with business and career audiences.
+  user: |
+    Write one concise, professional LinkedIn post (180–320 words) about the following topic:
+    Topic: {{topic}}
 
-    The post should highlight:
-    • {{key_point_1}}
-    • {{key_point_2}}
-    • {{optional_point_or_challenge}}
+    The post must clearly communicate these three main messages:
+    1. {{key_point_1}}
+    2. {{key_point_2}}
+    3. {{optional_point_or_challenge}} (include this point only if the provided text is non-empty and clearly relevant; otherwise omit it)
 
-    Use relevant emojis to make key points stand out and add visual interest.
+    Requirements:
+    • Write in first person ("I", "my", "we" when representing a team/company) unless the tone or context clearly requires otherwise.
+    • Use a {{tone}} tone consistently throughout the post.
+    • Tailor the language, examples, and level of detail to resonate with {{target_audience}}.
+    • Make the three main messages visually stand out by placing one relevant emoji at the beginning of each corresponding paragraph or bullet (max 1 emoji per point, choose professional and widely understood emojis only).
+    • Keep the overall style authentic, conversational yet professional — avoid excessive jargon, buzzwords, or overt self-promotion.
+    • End the post with a natural, engaging {{call_to_action}} (question, invitation to share experience, poll suggestion, or soft invitation to connect/message/comment).
+    • After the CTA, on a new line, add 3–5 highly relevant, specific hashtags (no generic tags like #Motivation or #Success; prefer niche or industry-specific tags).
 
-    The tone should be {{tone}} and tailored for {{target_audience}}.
+    Structure suggestion (adapt as needed):
+    - Opening hook (1–2 sentences that relate to the topic and grab attention)
+    - The three key points (each in its own short paragraph or bullet)
+    - Brief reflection / value takeaway
+    - Call to action
+    - Hashtags
 
-    End the post with a {{call_to_action}}.
-
-    Include 3–5 relevant hashtags at the end to improve visibility.
+    Write only the LinkedIn post itself. Do not include any explanations, planning notes, or additional commentary outside the post.
 inputs:
   - name: topic
     type: text
     required: true
-    description: The main subject or theme of the LinkedIn post.
+    description: The main subject or title of the LinkedIn post (e.g., "Why we're moving to outcome-based pricing in consulting")
   - name: key_point_1
     type: text
     required: true
-    description: The first important point or insight to highlight in the post.
+    description: First core message or insight that must be clearly communicated
   - name: key_point_2
     type: text
     required: true
-    description: The second important point or insight to highlight in the post.
+    description: Second core message or insight that must be clearly communicated
   - name: optional_point_or_challenge
     type: text
     required: false
-    description: An optional third point, such as a challenge, opportunity, or impact area related to the topic.
+    description: Optional third point, challenge, question, or additional insight (leave empty if not needed)
   - name: tone
     type: text
     required: true
-    description: The desired tone of the post (e.g., professional, personal, visionary).
+    description: Desired tone of voice (e.g., thoughtful, optimistic, candid, curious, confident, reflective)
   - name: target_audience
     type: text
     required: true
-    description: The intended audience for the post, such as industry professionals, executives, or policymakers.
+    description: Who the post should speak to (e.g., "SaaS founders and product leaders", "mid-career engineers in fintech", "HR directors in scale-ups")
   - name: call_to_action
     type: text
     required: true
-    description: The closing statement or question intended to spark engagement or interaction.
+    description: Type or style of CTA to end with (e.g., "question to the community", "share your experience in comments", "thoughts below", "DM me if this resonates")
 metadata:
   author: Rejith Krishnan @rejith
-  version: 0.3
+  version: 0.4
   last_updated: 2026-01-19
 favorite: false
