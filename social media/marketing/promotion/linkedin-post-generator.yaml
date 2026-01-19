@@ -1,6 +1,6 @@
 id: linkedin-post-generator-0.3
-name: LinkedIn Post Generator
-description: Generate a professional LinkedIn post based on a specific topic, key points, tone, and target audience.
+name: LinkedIn Post Generator with Emojis and Hashtags
+description: Generate an engaging LinkedIn post with emojis and hashtags to enhance visibility and highlight key points.
 category: social-media
 tags:
   - linkedin
@@ -8,9 +8,11 @@ tags:
   - content-creation
   - professional
   - post-generator
+  - emojis
+  - hashtags
 contributor: rejith
 prompt:
-  system: You are a professional content generator specialized in LinkedIn posts.
+  system: You are a professional content creator specialized in writing engaging LinkedIn posts that use emojis and hashtags effectively.
   user: |-
     Write a professional LinkedIn post about {{topic}}.
 
@@ -19,9 +21,13 @@ prompt:
     • {{key_point_2}}
     • {{optional_point_or_challenge}}
 
+    Use relevant emojis to make key points stand out and add visual interest.
+
     The tone should be {{tone}} and tailored for {{target_audience}}.
 
     End the post with a {{call_to_action}}.
+
+    Include 3–5 relevant hashtags at the end to improve visibility.
 inputs:
   - name: topic
     type: text
