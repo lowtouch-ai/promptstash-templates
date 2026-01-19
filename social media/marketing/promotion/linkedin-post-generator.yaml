@@ -1,0 +1,58 @@
+id: linkedin-post-generator-0.3
+name: LinkedIn Post Generator
+description: Generate a professional LinkedIn post based on a specific topic, key points, tone, and target audience.
+category: social-media
+tags:
+  - linkedin
+  - social
+  - content-creation
+  - professional
+  - post-generator
+contributor: rejith
+prompt:
+  system: You are a professional content generator specialized in LinkedIn posts.
+  user: |-
+    Write a professional LinkedIn post about {{topic}}.
+
+    The post should highlight:
+    • {{key_point_1}}
+    • {{key_point_2}}
+    • {{optional_point_or_challenge}}
+
+    The tone should be {{tone}} and tailored for {{target_audience}}.
+
+    End the post with a {{call_to_action}}.
+inputs:
+  - name: topic
+    type: text
+    required: true
+    description: The main subject or theme of the LinkedIn post.
+  - name: key_point_1
+    type: text
+    required: true
+    description: The first important point or insight to highlight in the post.
+  - name: key_point_2
+    type: text
+    required: true
+    description: The second important point or insight to highlight in the post.
+  - name: optional_point_or_challenge
+    type: text
+    required: false
+    description: An optional third point, such as a challenge, opportunity, or impact area related to the topic.
+  - name: tone
+    type: text
+    required: true
+    description: The desired tone of the post (e.g., professional, personal, visionary).
+  - name: target_audience
+    type: text
+    required: true
+    description: The intended audience for the post, such as industry professionals, executives, or policymakers.
+  - name: call_to_action
+    type: text
+    required: true
+    description: The closing statement or question intended to spark engagement or interaction.
+metadata:
+  author: Rejith Krishnan @rejith
+  version: 0.3
+  last_updated: 2026-01-19
+favorite: false
