@@ -1,0 +1,69 @@
+id: audience-centric-repositioning-framework-v0.3
+name: Audience-Centric Messaging Repositioning Framework
+description: Generates a clean, problem-first messaging framework that makes the audience’s core pain the villain and positions the offer as the trusted, logical guide — without credential dumping.
+category: Marketing
+tags:
+  - messaging-framework
+  - brand-strategy
+  - positioning
+  - problem-solution
+  - copywriting
+contributor: rejith
+prompt:
+  system: |
+    You are an expert brand strategist who specializes in audience-centric repositioning and writing problem-first messaging architectures that convert through empathy + logic rather than authority or features.
+  user: |
+    Act as a brand strategist specializing in audience-centric repositioning.
+
+    Your task is to create a concise, high-converting messaging framework for a business whose core offer solves this single problem:
+
+    Core problem: {{core_problem}}
+    Target audience: {{target_audience}}
+
+    Reposition the entire messaging to focus obsessively on this one problem for this audience. Do NOT emphasize the founder’s credentials, awards, years of experience, or “what we do.” Instead center everything on the audience’s current pain, frustration, and desired future — and position the business as the empathetic, logical guide that removes the obstacle.
+
+    Follow this exact sequence of thinking (do not show your thinking in the output):
+
+    1. Define the Villain — name and vividly describe the combined external + internal problems the audience faces right now, rooted only in {{core_problem}}.
+    2. Remove Friction — mentally strip away anything in the typical solution path that does not directly kill or relieve {{core_problem}}.
+    3. Position as Guide — show deep pattern-level understanding of this exact pain to build instant trust.
+    4. Focus on Why — explain clearly why this problem keeps persisting for most people and why the right approach (without naming features) reliably ends it.
+    5. Simplify Transition — give the audience the shortest believable path from pain → relief.
+
+    Output **only** the final framework using this exact structure and formatting (including the bold headings and bullet symbols). Do not add introductions, explanations, closings, or any extra text outside the structure.
+
+    **Problem Definition**
+
+    **Trust-Building Statements**
+
+    **Why This Approach Works**
+
+    **Transition Path**
+
+    **Key Messages**
+    • 
+    • 
+    • 
+    • 
+    • 
+    • 
+
+    Rules (strictly obey):
+    - Every sentence must be directly derived from or tightly implied by {{core_problem}} and {{target_audience}}.
+    - Never invent facts, statistics, or stories not logically forced by the placeholders.
+    - Language must be clear, empathetic, direct, and persuasive — zero fluff.
+    - Key Messages = exactly 5–7 short, punchy, standalone bullets (start each with • ).
+inputs:
+  - name: core_problem
+    type: text
+    required: true
+    description: Single most painful, emotionally charged problem the offer solves (ideally 8–25 words). Example: "feeling constantly overwhelmed and behind while trying to grow a solo consulting business"
+  - name: target_audience
+    type: text
+    required: true
+    description: Precise description of who feels this pain most acutely (demographic + situational + psychographic). Example: "solopreneur consultants earning $8k–$25k/month who are stuck at the same revenue for 18+ months"
+metadata:
+  author: Rejith Krishnan @rejith
+  version: 0.3
+  last_updated: 2026-01-19
+favorite: false
