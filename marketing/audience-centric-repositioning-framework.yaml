@@ -57,11 +57,13 @@ inputs:
   - name: core_problem
     type: text
     required: true
-    description: Single most painful, emotionally charged problem the offer solves (ideally 8–25 words). Example: "feeling constantly overwhelmed and behind while trying to grow a solo consulting business"
+    description: |
+      Single most painful, emotionally charged problem the offer solves (ideally 8–25 words). Example: "feeling constantly overwhelmed and behind while trying to grow a solo consulting business"
   - name: target_audience
     type: text
     required: true
-    description: Precise description of who feels this pain most acutely (demographic + situational + psychographic). Example: "solopreneur consultants earning $8k–$25k/month who are stuck at the same revenue for 18+ months"
+    description: |
+      Precise description of who feels this pain most acutely (demographic + situational + psychographic). Example: "solopreneur consultants earning $8k–$25k/month who are stuck at the same revenue for 18+ months"
 metadata:
   author: Rejith Krishnan @rejith
   version: 0.3
