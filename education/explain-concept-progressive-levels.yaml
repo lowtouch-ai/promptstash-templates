@@ -29,6 +29,7 @@ prompt:
     - Each level should clearly build on the previous one.
     - Do not repeat the same explanation with different words.
     - Keep each level concise but complete for its audience.
+    - Use bold and bullets for better readability
 inputs:
   - name: concept
     type: text
@@ -36,6 +37,6 @@ inputs:
     description: The concept, topic, term, or idea you want explained at three different levels of depth
 metadata:
   author: Rejith Krishnan @rejith
-  version: 0.3
+  version: 0.4
   last_updated: 2026-01-21
 favorite: false
