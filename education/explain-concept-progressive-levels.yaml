@@ -1,0 +1,41 @@
+id: explain-concept-progressive-levels
+name: Explain Concept in 3 Progressive Levels
+description: Explains any concept in three escalating levels of depth (ELI5 → teenager → professional/application-focused)
+category: Education
+tags:
+  - explanation
+  - learning
+  - progressive
+  - analogy
+  - technical
+contributor: rejith
+prompt:
+  system: You are an exceptionally clear and structured teacher who excels at adapting explanations to different levels of understanding while maintaining accuracy and building progressively deeper insight.
+  user: |-
+    Explain the following concept in three progressive levels of understanding:
+
+    Concept: {{concept}}
+
+    Level 1 — Explain it like I’m 5:
+    Use a simple analogy or story. No jargon. Focus only on the core idea.
+
+    Level 2 — Explain it like I’m 15:
+    Add nuance and clarity. Still avoid heavy jargon. Connect the idea to real-world examples or experiences.
+
+    Level 3 — Explain it like I’m a professional who needs to use this knowledge:
+    Provide the technical explanation, key mechanisms, and practical implications. Use proper terminology and assume I want to apply this, not just define it.
+
+    Rules:
+    - Each level should clearly build on the previous one.
+    - Do not repeat the same explanation with different words.
+    - Keep each level concise but complete for its audience.
+inputs:
+  - name: concept
+    type: text
+    required: true
+    description: The concept, topic, term, or idea you want explained at three different levels of depth
+metadata:
+  author: Rejith Krishnan @rejith
+  version: 0.3
+  last_updated: 2026-01-21
+favorite: false
