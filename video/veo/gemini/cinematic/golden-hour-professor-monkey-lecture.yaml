@@ -1,0 +1,67 @@
+id: golden-hour-professor-monkey-lecture-0.5
+name: Golden Hour Professor Monkey Educational Reel
+description: Creates an 8-second vertical cinematic reel featuring a photorealistic Capuchin monkey in safari gear delivering a quick educational fact about CO2 during golden hour in a rainforest, with immediate dialogue start.
+category: Video Generation
+tags:
+  - cinematic
+  - vertical-video
+  - photorealistic
+  - animal-character
+  - educational
+  - golden-hour
+  - surreal
+  - national-geographic-style
+contributor: rejith
+prompt:
+  system: You are a world-class AI video generation prompt engineer. Generate highly detailed, structured video prompts optimized for tools like Runway, Kling, Luma, or Pika. Strictly follow all timing, technical, and stylistic instructions provided in the user message.
+  user: |-
+    Video Title: The Golden Hour Professor
+
+    Format: Vertical 9:16, cinematic high-definition
+    Duration: Exactly 8 seconds
+    Resolution: 4K, 60 fps
+
+    Strict Requirements:
+    - Maintain photorealistic quality throughout.
+    - Feature only one character: a biologically accurate adult Capuchin monkey (no additional animals or humans).
+    - Do not alter, modernize, or add elements not explicitly described.
+    - Preserve the surreal yet educational tone: National Geographic-level realism combined with whimsical character design.
+    - Dialogue must begin immediately at video start (0 seconds); monkey speaks the line early while looking directly at camera.
+
+    Scene Sequence & Camera (timed for 8 seconds):
+    0–1 sec: Video opens instantly on the monkey in tight medium shot; no long establishing foliage glide before reveal.
+       - Monkey already centered and perched on moss-covered fallen log in dense tropical rainforest during golden hour.
+       - Backlit amber sunlight beams pierce through monstera leaves and mahogany branches behind, creating volumetric god rays, swirling dust motes, and light rising mist.
+       - Dominant colors: deep emerald greens, burnt oranges, warm gold rim light on fur and gear.
+       - Shallow depth of field (35mm lens equivalent), strong creamy bokeh on background foliage for intimate focus on monkey.
+
+    0–7 sec (overlapping with above): Monkey looks directly into lens with calm, intelligent, professorial gaze from the first frame.
+       - Hyper-detailed fur with individual strands catching rim light; realistic skin textures on face, hands, and expressive features.
+       - Monkey wears detailed miniature safari outfit: weathered khaki multi-pocket vest + small tilted pith helmet with thin leather chin strap.
+       - From ~0.5–1 sec onward, monkey makes a small, natural hand gesture (subtle point or open-palm emphasis) while beginning to speak.
+       - Smooth, very gentle forward dolly/gimbal move continues subtly throughout (minimal zoom-in) to maintain engagement without disorienting early speech.
+
+    Dialogue (starts immediately at 0 seconds; full line delivered calmly and clearly by ~5–6 sec max, with natural pacing and accurate lip-sync; sophisticated mid-range naturalist voice with hint of curiosity):
+    "{{dialog}}"
+
+    7–8 sec: Hold on tight medium shot of monkey’s face/upper body; subtle post-speech professorial nod or relaxed expression as audio fades naturally.
+
+    Audio Design:
+    - Ambient (throughout, balanced low): Distant macaw/toucan calls, cicada hum, gentle leaf rustle in warm breeze (immersive, never overpowering voice).
+    - Foley: Subtle clink of vest buttons and soft moss crunch timed to small posture/gesture shift near start.
+    - Voice: Articulate, educated tone; no cartoonish exaggeration; priority mix so dialogue is crystal clear from frame 1.
+
+    Lighting & Style:
+    - Primary: Backlit golden-hour sunset, strong rim light, soft volumetric beams, natural soft shadows.
+    - Mood: Intimate, wondrous, slightly surreal — high-end documentary realism meets whimsical character.
+    - Aspect & feel: 9:16 vertical composition optimized for mobile/reel viewing; shallow DoF emphasizes immediate subject intimacy and direct address to viewer.
+inputs:
+  - name: dialog
+    type: text
+    required: true
+    description: The exact spoken line the monkey should deliver (e.g. "Did you know CO2 is only 0.04 percent in our atmosphere?"). Keep it short and factual for an 8-second reel.
+metadata:
+  author: Rejith Krishnan @rejith
+  version: 0.5
+  last_updated: 2026-01-21
+favorite: false
