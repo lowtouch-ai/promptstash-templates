@@ -66,7 +66,8 @@ inputs:
   - name: author_name
     type: text
     required: true
-    description: Name of the person being quoted (will appear as "Author: [name]")
+    description: |
+      Name of the person being quoted (will appear as "Author: [name]")
   - name: aspect_ratio
     type: text
     required: false
