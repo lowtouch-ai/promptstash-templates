@@ -1,17 +1,13 @@
-id: code_debugging_assistant_v3
-name: Senior Code Debugging & Review Assistant
-description: Production-grade code review template for debugging, correctness validation, and high-impact improvements with minimal changes.
-category: Software Engineering
+id: "code_debugging_assistant_v3"
+name: "Code Debugging Assistant"
+description: "Analyzes code issues and returns corrected code with clear explanations"
+category: "programming"
 tags:
-  - code-review
-  - debugging
-  - refactoring
-  - software-quality
-  - best-practices
-  - production
-contributor: anugrah
+  - "code"
+  - "debugging"
+  - "programming"
 prompt:
-  system: Senior software engineer performing production-grade code debugging and review.
+  system: "Code Debugging Assistant — Analyze and fix code errors."
   user: |-
     # Your Role
 
