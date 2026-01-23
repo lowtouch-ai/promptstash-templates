@@ -1,0 +1,78 @@
+id: editorial-corporate-portrait-quote-overlay-v0.3
+name: Editorial Corporate Portrait with Quote Overlay (Quote Cards)
+description: Clean editorial-style portrait using rule-of-thirds with large right-side negative space for a prominent quote, subtle quotation mark watermark, and clean white studio look.
+category: Graphic Design / Quote Cards
+tags:
+  - portrait
+  - editorial
+  - quote-overlay
+  - corporate
+  - typography
+  - rule-of-thirds
+  - studio-photography
+  - white-background
+contributor: rejith
+prompt:
+  system: You are a high-end commercial photographer and graphic designer specializing in clean, modern corporate editorial visuals with integrated typography.
+  user: |
+    **Image Type:** Editorial corporate portrait with integrated typography quote overlay
+
+    **Subject & Composition**
+    - Use the attached person/photo as the subject (single person only)
+    - Classic editorial portrait framed using **rule-of-thirds** composition
+    - Subject positioned on the **left third** of the frame
+    - Subject facing **toward the right** (looking into the negative space)
+    - Large clean **negative space** on the right side for typography
+
+    **Background**
+    - Pure, pristine **white studio backdrop**
+    - Very subtle, extra-large **quotation mark watermark** (extremely faint, low opacity ~8–12%, monochromatic light gray) centered behind the quote text — do not let it compete with the typography or subject
+
+    **Lighting**
+    - Soft, even, professional **4K studio lighting**
+    - Clean beauty / corporate headshot quality — no harsh shadows, no dramatic contrast
+
+    **Typography – Main Quote**
+    - Text: **{{quote_text}}**
+    - Font: bold, modern geometric sans-serif (e.g. Futura, Montserrat ExtraBold, Avenir Next Demi, similar)
+    - Color: **{{quote_color}}** (e.g. charcoal blue, deep navy, near-black)
+    - Sharp, highly legible, premium quality text rendering
+    - Size: large enough to be dominant and readable, but not overwhelming the portrait
+
+    **Typography – Attribution**
+    - Text: **Author: {{author_name}}**
+    - Same font family, lighter weight (regular or medium)
+    - Smaller size (~30–40% of main quote size)
+    - Same color as main quote or slightly lighter variant
+    - Positioned below or to the bottom-right of the main quote
+
+    **Overall Style & Quality**
+    - Ultra-detailed commercial photography aesthetic
+    - Clean, modern, professional corporate editorial look
+    - High-resolution, 4K–8K quality
+    - Aspect ratio: {{aspect_ratio}} (default 3:4 portrait or 4:5 if not specified)
+    - No additional people, objects, logos, borders, or decorations
+
+    Generate exactly this layout — do not add creative variations unless explicitly requested.
+inputs:
+  - name: quote_text
+    type: text
+    required: true
+    description: The main quotation or inspirational statement to display prominently (multi-line text is allowed)
+  - name: quote_color
+    type: text
+    required: true
+    description: Color of the main quote text (e.g. charcoal blue, #1E2A44, deep navy, near-black, #111111)
+  - name: author_name
+    type: text
+    required: true
+    description: Name of the person being quoted (will appear as "Author: [name]")
+  - name: aspect_ratio
+    type: text
+    required: false
+    description: Desired image aspect ratio (e.g. 3:4, 4:5, 2:3, 4:3, 16:9). Defaults to 3:4 portrait if left empty.
+metadata:
+  author: Rejith Krishnan @rejith
+  version: 0.3
+  last_updated: 2026-01-22
+favorite: false
