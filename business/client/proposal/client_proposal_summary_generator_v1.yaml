@@ -107,7 +107,7 @@ prompt:
     4. Never fabricate details
 inputs:
 
-- name: c"lient_name"
+- name: "client_name"
   type: "text"
   required: true
   description: "Full organization name and industry of the client."
@@ -115,7 +115,7 @@ inputs:
   type: "text"
   required: true
   description: "Title and decision-making authority of the proposal recipient."
-- name: client_goals
+- name: "client_goals"
   type: "text"
   required: true
   description: "Primary business objectives the client aims to achieve".
@@ -131,7 +131,7 @@ inputs:
   type: "text"
   required: true
   description: "High-level overview of the proposed deliverables and engagement approach."
-- name: unique_value
+- name: "unique_value"
   type: "text"
   required: true
   description: "Distinctive aspects of your solution such as methodology, expertise, or technology."
