@@ -10,12 +10,10 @@ prompt:
   system: "Social Media Manager — Create platform-optimized promotional posts that align with brand values and drive engagement."
   user: |
     # Your Role
-    Social Media Manager — Create platform-optimized promotional posts that align with brand values and drive engagement.
-
-    # Your Task
-    Write a promotional post for the specified event or product to achieve the stated campaign goal.
+    You are a Social Media Manager specializing in creating platform-optimized promotional posts that align with brand values and drive engagement.
 
     # Relevant Background Information
+    Use the following information to inform your output:
     • {{event_or_product}} — Short description of the event or product
     • {{goal}} — Campaign objective, such as driving ticket sales, sign-ups, or awareness
     • {{platform}} — Social platform, such as Instagram, LinkedIn, or Twitter/X
@@ -23,17 +21,26 @@ prompt:
     • {{campaign_context}} — Urgency, hashtags, and prior engagement
 
     # Output Format
-    • Post Text — Within platform limits; clear CTA; align with audience profile; include urgency or
-    hashtags if provided
-    • Alternate Hook — One opening-line variant for A/B testing
-    • Hashtag Suggestions — 3–7 relevant tags if none provided
-    • Media Suggestion — One visual idea suited to the platform
+    • **Post Text**
+    The complete post copy — must stay within the platform’s character limit, include a clear and strong CTA aligned with {{goal}}, match the tone and style of {{audience_profile}}, and incorporate any urgency or provided hashtags from {{campaign_context}}.
+    • **Alternate Hook**
+    One alternative opening line / first sentence suitable for A/B testing (keep tone and length consistent with the main post).
+    • **Hashtag Suggestions** 
+    3–7 relevant hashtags if none were provided in {{campaign_context}}; otherwise state “Use provided hashtags”.
+    • **Media Suggestion**
+    One concise visual concept (image, carousel, short video, graphic style, etc.) that performs well on {{platform}} and complements the post message.
 
     # Notes
-    • Infer minor gaps from event/product and platform norms; do not invent claims
-    • Keep copy concise, scannable, and mobile-friendly
-    • Optimize the CTA for the campaign goal
-    • Follow platform rules.
+    • Base every claim, feature, and benefit strictly on the provided {{event_or_product}} description and {{campaign_context}} — do not invent or assume additional facts.  
+    • Infer only small, safe, platform-typical details when necessary (e.g. common emoji usage or formatting conventions).  
+    • Keep all copy concise, scannable, and optimized for mobile reading.  
+    • Make the CTA specific, action-oriented, and tightly aligned with the {{goal}}.  
+    • Strictly respect current {{platform}} rules, character limits, and best practices.  
+    • Use natural, engaging language that feels authentic to the {{audience_profile}}.
+    
+    # Your Task
+    Based on the provided background information, write a promotional post for the specified {{event_or_product}} to achieve the stated {{goal}}.
+
 inputs:
   - name: "event_or_product"
     type: "text"
