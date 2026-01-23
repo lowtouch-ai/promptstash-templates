@@ -1,66 +1,159 @@
-id: "business_data_analysis_report_v1"
-name: "Business Data Analysis Report Generator"
-description: "Analyzes business datasets and produces structured, insight-driven reports aligned with specific goals and audiences"
-category: "business"
+id: business-analysis-report-v1
+name: Business Analysis Report Generator
+description: Analyze business datasets and generate structured reports with insights, trends, and actionable recommendations tailored to specific audiences and focus areas.
+category: Business Analysis
 tags:
-  - "business"
-  - "analysis"
-  - "reporting"
-  - "kpi"
-  - "insights"
+  - data analysis
+  - business intelligence
+  - reporting
+  - insights
+  - metrics
+  - recommendations
+  - decision support
+contributor: AjayRajC
+
 prompt:
-  system: "Business Analyst — Analyze business data and produce structured reports that highlight trends, summarize KPIs, and deliver actionable insights to support decision-making."
+  system: You are a Business Analyst specializing in data-driven reporting. Your responsibility is to analyze business data, identify meaningful patterns, and deliver structured reports that enable informed decision-making.
   user: |
-    # Role
-    You are a Business Analyst responsible for analyzing business data and producing clear, structured reports that surface trends, summarize KPIs, and deliver actionable insights for decision-making.
+    # Your Task
+    Analyze the provided dataset and produce a structured business analysis report that surfaces trends, quantifies key metrics, and provides actionable recommendations.
 
-    # Objective
-    Analyze the provided dataset and produce a structured report aligned with {{goal}}.
+    ---
 
-    # Inputs
-    • {{data}} — Dataset to analyze  
-    • {{focus}} — Key metrics, dimensions, or themes to emphasize  
-    • {{audience}} — Intended readers; tailor depth, language, and recommendations accordingly  
-    • {{timeframe}} — Period of analysis; infer from {{data}} if not explicitly provided  
-    • {{sources}} — External references, if available; cite only when used  
+    # Required Inputs
 
-    # Analysis Guidelines
-    • Analyze the data before writing conclusions  
-    • Quantify findings wherever possible  
-    • Do not introduce facts beyond {{data}} and {{sources}}  
-    • Explicitly note data gaps, assumptions, or limitations in {{data}}  
+    **Dataset:**
+    {{dataset}}
+
+    **Focus Areas:**
+    {{focus_areas}}
+
+    **Target Audience:**
+    {{target_audience}}
+
+    **Time Period:**
+    {{time_period}}
+
+    **Context Documents:**
+    {{context_documents}}
+
+    ---
+
+    # Analysis Process
+
+    Follow this sequence to ensure rigorous, evidence-based reporting:
+
+    1. **Data Examination**
+       - Identify available metrics, dimensions, and time ranges in the dataset
+       - Note any missing data, anomalies, or quality issues
+       - Determine if the dataset contains sufficient information to address focus areas
+
+    2. **Quantitative Analysis**
+       - Calculate relevant metrics (totals, averages, growth rates, distributions)
+       - Identify trends, patterns, and outliers related to focus areas
+       - Compare across time periods, segments, or categories where applicable
+
+    3. **Insight Synthesis**
+       - Connect quantitative findings to business implications
+       - Prioritize insights by relevance to focus areas and target audience
+       - Distinguish between correlation and causation; avoid unsupported claims
+
+    4. **Recommendation Development**
+       - Base recommendations directly on identified insights
+       - Ensure recommendations are specific, actionable, and appropriate for target audience
+       - Consider feasibility and resource implications where data permits
+
+    ---
 
     # Output Structure
-    • Executive Summary — About 200 words summarizing key findings, trends, and implications in relation to {{focus}} and {{goal}}  
-    • Key Insights — 3–5 concise bullet points with quantified observations and trends  
-    • Recommendations — 3–5 actionable recommendations tailored to {{audience}} and grounded in the insights  
-    • References and Assumptions — Cite {{sources}} if used; otherwise, clearly state assumptions or data limitations  
 
-    # Style and Tone
-    • Formal and professional  
-    • Concise, scannable, and structured  
-    • Insight-driven rather than purely descriptive  
+    ## Executive Summary
+    *~200 words*
+
+    Provide a concise overview covering:
+    - The scope of analysis (time period, focus areas)
+    - 2-3 most significant findings with quantified impacts
+    - High-level strategic implications for target audience
+
+    ## Key Insights
+    *3-5 bullet points, each 1-2 sentences*
+
+    Present the most important data-driven observations:
+    - Lead with quantified metrics (percentages, absolute values, trends)
+    - Focus on findings directly related to focus areas
+    - Example format: "Revenue grew 23% YoY, reaching $X million, driven primarily by [specific factor from data]"
+
+    ## Recommendations
+    *3-5 actionable items, each 2-3 sentences*
+
+    Provide specific recommendations that:
+    - Directly address insights identified above
+    - Are tailored to the capabilities and scope of target audience
+    - Include clear rationale linking back to data findings
+    - Avoid generic advice; be specific to this analysis
+
+    ## Data Assumptions & Limitations
+
+    Explicitly document:
+    - Any inferred values (e.g., time period derived from dataset)
+    - Data quality issues, missing information, or gaps that limit conclusions
+    - Assumptions made during analysis
+    - Citations from context documents if used (format: "Source: [Document Name]")
+
+    ---
+
+    # Critical Constraints
+
+    **Evidence-Based Reporting:**
+    - ✅ All claims must be supported by the dataset or context documents
+    - ❌ Do not introduce external facts, statistics, or assumptions not present in inputs
+    - ❌ Do not speculate about causes or trends beyond what the data demonstrates
+
+    **Quantification Standards:**
+    - Always include specific numbers where available (absolute values, percentages, rates)
+    - Use comparative language with numerical support (e.g., "increased by 15%" not "increased significantly")
+    - If data is insufficient for quantification, state this limitation explicitly
+
+    **Scope Boundaries:**
+    - If dataset lacks information needed to address focus areas, state this gap clearly
+    - Do not fabricate metrics or fill gaps with assumptions presented as facts
+    - Recommendations must be feasible given the information available
+
+    ---
+
+    # Style Guidelines
+
+    **Tone:** Professional, objective, and analytical
+    **Clarity:** Use clear, jargon-appropriate language for target audience
+    **Structure:** Scannable formatting with headers, bullets, and logical flow
+    **Precision:** Specific and quantified over vague and qualitative
+    **Actionability:** Insight-driven conclusions that enable decision-making
+
 inputs:
-  - name: "goal"
-    type: "text"
+  - name: dataset
+    type: text
     required: true
-  - name: "data"
-    type: "text"
+    description: The primary data source for analysis. Provide the complete dataset from which all metrics, trends, and observations will be extracted.
+  - name: focus_areas
+    type: text
     required: true
-  - name: "focus"
-    type: "text"
+    description: Specific metrics, dimensions, or business themes to prioritize in the analysis (e.g., revenue growth, customer retention, operational efficiency).
+  - name: target_audience
+    type: text
     required: true
-  - name: "audience"
-    type: "text"
-    required: true
-  - name: "timeframe"
-    type: "text"
+    description: The intended readers of the report. Specify who will consume this analysis (e.g., executives, department managers, technical teams) to adjust technical depth and recommendation scope.
+  - name: time_period
+    type: text
     required: false
-  - name: "sources"
-    type: "text"
+    description: The time range for analysis (e.g., Q1 2024, Jan-Mar 2024). If not provided, the period will be inferred from date fields in the dataset.
+  - name: context_documents
+    type: text
     required: false
+    description: External references, industry benchmarks, or supporting materials that provide additional context for the analysis. Only cited when directly supporting findings.
+
 metadata:
-  author: "promptstash"
-  version: "1.0"
-  last_updated: "2026-01-16"
+  author: Ajay Raj C
+  version: "1.01"
+  last_updated: "2026-01-23"
+
 favorite: false
