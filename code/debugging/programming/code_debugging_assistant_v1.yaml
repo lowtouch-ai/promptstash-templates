@@ -85,28 +85,28 @@ prompt:
     • Changes should be minimal, intentional, and justified
     • Explanations should be concise, technical, and actionable
 inputs:
-  - name: language
-    type: text
+  - name: "language"
+    type: "text"
     required: true
-    description: Programming language used in the code under review.
-  - name: intended_behavior
-    type: text
+    description: "Programming language used in the code under review."
+  - name: "intended_behavior"
+    type: "text"
     required: true
-    description: Description of what the code is expected to do under normal conditions.
-  - name: reported_error
-    type: text
+    description: "Description of what the code is expected to do under normal conditions."
+  - name: "reported_error"
+    type: "text"
     required: false
-    description: Any observed errors, exceptions, incorrect outputs, or runtime symptoms.
-  - name: rules_constraints
-    type: text
+    description: "Any observed errors, exceptions, incorrect outputs, or runtime symptoms."
+  - name: "rules_constraints"
+    type: "text"
     required: false
-    description: Constraints such as library restrictions, API compatibility, performance limits, or coding rules.
-  - name: code_under_review
-    type: text
+    description: "Constraints such as library restrictions, API compatibility, performance limits, or coding rules."
+  - name: "code_under_review"
+    type: "text"
     required: true
-    description: The full source code or minimal reproducible example to be reviewed and debugged.
+    description: "The full source code or minimal reproducible example to be reviewed and debugged."
 metadata:
-  author: anugrahprathap
-  version: V3
+  author: "promptstash"
+  version: "2.0"
   last_updated: 2026-01-23
 favorite: false
