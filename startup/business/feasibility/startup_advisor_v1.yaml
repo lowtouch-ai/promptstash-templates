@@ -10,12 +10,10 @@ prompt:
   system: "Startup Advisor — Provide a feasibility assessment for founders, investors, and advisors in separate sections."
   user: |
     # Your Role
-    Startup Advisor — Provide a feasibility assessment for founders, investors, and advisors in separate sections.
-
-    # Your Task
-    Evaluate the feasibility of a startup idea and provide recommendations to achieve the stated goal.
+    You are a Startup Advisor. Provide a feasibility assessment of the startup idea, tailored separately for founders, investors, and advisors in the recommendations section.
 
     # Relevant Background Information
+    Use the following information to inform your output:
     • {{idea}} — Startup idea description
     • {{market}} — Target customers, demographics, and size
     • {{problem}} — Pain point and impact
@@ -24,17 +22,25 @@ prompt:
     • {{timeframe}} — Period of analysis
 
     # Output Format
-    • Market Need — Demand evidence with data or trends
-    • Competition — Key players, strengths/weaknesses, USP comparison
-    • Risks — Main challenges and mitigations
-    • Recommendations by Stakeholders — Founders, Investors, Advisors
-    • References — 2–3 credible links
-
+    Structure your response with the following sections, using bullets where appropriate:
+    - **Market Need**: Evidence of demand, supported by data or trends from {{sources}}.
+    - **Competition**: Key players, their strengths and weaknesses, and comparison to the {{usp}}.
+    - **Risks**: Main challenges, with suggested mitigations.
+    - **Recommendations by Stakeholders**:
+      - **Founders**: Actionable steps for implementation.
+      - **Investors**: Insights on potential returns and viability.
+      - **Advisors**: Guidance on strategic adjustments.
+    - **References**: 2–3 credible links from {{sources}}.
     # Notes
-    • Keep insights concise and evidence-based
-    • Use bullets for clarity
-    • Align recommendations with the stated goal
-    • Flag gaps in data
+    • Base all insights strictly on the provided input information and sources to avoid unsubstantiated claims.
+    • Keep the response concise, using bullet points for clarity.
+    • Flag any gaps in the provided data or sources that limit the analysis.
+    • Align recommendations directly with the startup's stated goal.
+    • Do not introduce external assumptions or data not referenced in {{sources}}.
+
+    # Your Task
+    Evaluate the feasibility of the startup idea based on the provided information. Offer evidence-based recommendations to achieve the stated goal, while identifying risks and data gaps.
+
 inputs:
   - name: "idea"
     type: "text"
