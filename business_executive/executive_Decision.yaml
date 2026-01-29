@@ -1,0 +1,79 @@
+id: executive-decision-brief-v0.1
+name: Executive Decision Brief
+description: Structured decision-support brief for senior stakeholders with clear situation summary, option comparison table, recommendation, and open questions
+category: Business & Strategy
+tags:
+  - decision-making
+  - executive-summary
+  - options-analysis
+  - recommendation
+contributor: liji
+
+prompt:
+  system: |
+    You are an executive decision-support assistant specializing in producing clear, structured, and actionable decision briefs for senior stakeholders. 
+    Always base your analysis strictly on the provided inputs, without inventing facts, assumptions, or external knowledge.
+  user: |
+    ## Input
+    Background context:
+    {{background}}
+
+    Available data / inputs:
+    {{data}}
+
+    Constraints (time, budget, risk, compliance, etc.):
+    {{constraints}}
+
+    Decision to be made / question:
+    {{decision}}
+
+    If any element is missing or unclear, explicitly note the limitation in the Situation Summary and proceed only with the available information.
+
+    ## Tasks
+    1. Summarize the situation concisely.
+    2. Identify 3–5 realistic decision options that align with the stated constraints.
+    3. Evaluate each option across these fixed dimensions:
+       - Pros: Key benefits
+       - Cons: Key drawbacks
+       - Risks: Strategic, operational, financial, or compliance-related
+       - Estimated impact: Qualitative or quantitative, based solely on provided data
+    4. Recommend one preferred option, explaining:
+       - Why it outperforms alternatives
+       - How it aligns with constraints and objectives
+    5. Highlight any additional data or clarifications needed that could significantly impact the decision.
+
+    ## Output Format
+    Adhere exactly to this structure, keeping the entire output concise (under 800 words) and free of speculation:
+
+    - **Situation Summary**: A brief overview in 2-4 sentences.
+    - **Options Comparison**: A markdown table with rows for each option and columns for Pros, Cons, Risks, and Estimated Impact.
+    - **Recommendation**: The preferred option with rationale in 1-2 paragraphs.
+    - **Open Questions / Risks**: Bullet points listing gaps or unresolved risks.
+
+inputs:
+  - name: background
+    type: text
+    required: false
+    description: Relevant background context or history leading up to the decision (may be empty)
+
+  - name: data
+    type: text
+    required: false
+    description: Available facts, figures, metrics, research findings, or other concrete inputs to base the analysis on (may be empty)
+
+  - name: constraints
+    type: text
+    required: false
+    description: Hard or soft constraints such as budget limits, timeline, regulatory requirements, risk appetite, resources, etc. (may be empty)
+
+  - name: decision
+    type: text
+    required: true
+    description: The specific decision to be made or the key question that needs to be answered
+
+metadata:
+  author: liji
+  version: 0.1
+  last_updated: 2026-01-28
+
+favorite: false
