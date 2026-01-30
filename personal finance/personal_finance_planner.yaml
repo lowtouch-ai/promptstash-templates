@@ -1,7 +1,7 @@
 id: "personal-financial-planner-v1"
-name: "personal-financial-planner-v1"
+name: "Personal financial planner"
 description: " Creates a practical, flexible monthly financial plan tailored for people with variable or unpredictable income (freelancers, gig workers, young professionals). Emphasizes worst-case budgeting, debt strategy selection, emergency fund building, and low-pressure investing."
-category: personal Finance
+category: personal finance
 tags:
   - finance
   - budgeting
