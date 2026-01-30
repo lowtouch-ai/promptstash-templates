@@ -1,0 +1,87 @@
+id: "career-alignment-analyst-report-v2"
+name: "Career Discovery and Fit Analyzer"
+description: "Produces a structured, evidence-based career fit report focused on realistic market fit, skill gaps, timelines, risks, and location-adjusted outcomes."
+category: career
+tags:
+  - career
+  - career-advice
+  - job-market
+  - skills-assessment
+prompt:
+  system: |
+    You are an Expert Career Alignment Analyst.
+  user: |
+    Analyze the following user profile and deliver a concise, structured **Career Fit Report** in Markdown format.
+
+    # User Profile
+    - Stage: {current_stage}
+    - Age: {age}
+    - Location: {location}
+    - Education: {education}
+    - Work experience: {work_experience} ({experience_years} years)
+    - Key skills: {key_skills}
+    - Work style & personality: {work_style_and_personality}
+    - Values & priorities: {values_and_priorities}
+    - Constraints & deal-breakers: {constraints}
+    - Careers / directions considering: {careers_considering}
+    - Main questions or concerns: {questions_or_concerns}
+
+    # Guidelines
+    - Base all recommendations strictly on the provided profile, incorporating realistic market demand, entry barriers, income ranges (use location-specific percentiles), and lifestyle fit (adapted to {location}).
+    - Recommend exactly 3–6 career paths: 2–3 strong fits (label as High or Medium-High), 1–2 stretches (label as Stretch), and 0–2 high-risk/misaligned (include user-suggested careers if relevant).
+    - Clearly separate facts (from profile or verifiable data), assumptions (stated explicitly), and recommendations.
+    - Use a calm, direct, non-judgmental tone — no cheerleading or exaggeration.
+    - Source any market data from reliable references if needed; do not hallucinate statistics.
+    - Tie every point to the specific profile — avoid generic advice.
+    - Aim for clarity and conciseness.
+
+    # Output Structure
+
+    - Profile Snapshot: list key strengths & alignments + main constraints & trade-offs
+    - Recommended Paths: for each suggest  **Path: [Name] — Fit: High/Medium-High/Stretch** followed by bullets: Why it aligns • Skill gaps & time to close • Entry routes • Time-to-stable (conservative) • Stability/risk • Lifestyle + realistic income range ({location})
+    - Misaligned / High-Risk Options (Include only if user-suggested or a clear mismatch based on profile): - Option: [Name] — Why poor fit / high risk
+    - Next Steps (prioritized): bullets for top skills/credentials • fastest learning paths • low-risk experiments • one-sentence decision heuristic
+   
+    Produce the report now.
+inputs:
+  - name: current_stage
+    type: text
+    required: true
+  - name: age
+    type: text
+    required: true
+  - name: location
+    type: text
+    required: true
+  - name: education
+    type: text
+    required: true
+  - name: work_experience
+    type: text
+    required: true
+  - name: experience_years
+    type: text
+    required: true
+  - name: key_skills
+    type: text
+    required: true
+  - name: work_style_and_personality
+    type: text
+    required: false
+  - name: values_and_priorities
+    type: text
+    required: false
+  - name: constraints
+    type: text
+    required: true
+  - name: careers_considering
+    type: text
+    required: false
+  - name: questions_or_concerns
+    type: text
+    required: false
+metadata:
+  author: promptstash
+  version: 2.0
+  last_updated: 2025-07-15
+favorite: false
