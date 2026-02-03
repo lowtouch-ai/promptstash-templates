@@ -14,17 +14,17 @@ prompt:
     Analyze the following user profile and deliver a concise, structured **Career Fit Report** in Markdown format.
 
     # User Profile
-    - Stage: {current_stage}
-    - Age: {age}
-    - Location: {location}
-    - Education: {education}
-    - Work experience: {work_experience} ({experience_years} years)
-    - Key skills: {key_skills}
-    - Work style & personality: {work_style_and_personality}
-    - Values & priorities: {values_and_priorities}
-    - Constraints & deal-breakers: {constraints}
-    - Careers / directions considering: {careers_considering}
-    - Main questions or concerns: {questions_or_concerns}
+    - Stage: {{current_stage}}
+    - Age: {{age}}
+    - Location: {{location}}
+    - Education: {{education}}
+    - Work experience: {{work_experience}}
+    - Key skills: {{key_skills}}
+    - Work style & personality: {{work_style_and_personality}}
+    - Values & priorities: {{values_and_priorities}}
+    - Constraints & deal-breakers: {{constraints}}
+    - Careers / directions considering: {{careers_considering}}
+    - Main questions or concerns: {{questions_or_concerns}}
 
     # Guidelines
     - Base all recommendations strictly on the provided profile, incorporating realistic market demand, entry barriers, income ranges (use location-specific percentiles), and lifestyle fit (adapted to {location}).
