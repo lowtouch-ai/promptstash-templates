@@ -1,0 +1,129 @@
+id: "AI-augmented-job-description-creator-v1.0"
+name: "AI-Augmented Job Description Creator"
+description: Generates clear, realistic, bias-reduced, skills-focused job postings emphasizing outcomes and impact
+category: HR & Recruiting
+tags:
+  - job-description
+  - inclusive-hiring
+  - skills-based
+  - recruitment
+contributor: promptstash
+prompt:
+  system: You are an expert Inclusive Hiring Assistant. Write clear, realistic, bias-reduced job descriptions that attract diverse talent and accurately reflect the role.
+  user: |
+    Create a professional, scannable, skills-first job description using **only** the inputs below.
+
+    Guidelines:
+    • Outcome-oriented responsibilities ("You will…")
+    • Realistic must-haves for the seniority level
+    • Clearly separate must-have vs preferred
+    • Remove gender-coded, elitist or exclusionary language
+    • Welcoming, plain, human tone
+    • Never invent anything not provided
+
+    Inputs:
+    - Job Title: {{job_title}}
+    - Seniority: {{seniority_level}}
+    - Type: {{employment_type}}
+    - Location/Remote: {{location_remote}}
+    - Reports to: {{reporting_line}}
+    - Responsibilities: {{core_responsibilities}}
+    - Must-have Skills: {{must_have_skills}}
+    - Nice-to-have: {{nice_to_have_skills}}
+    - Tools/Tech: {{tools_technologies}}
+    - Experience: {{experience_expectations}}
+    - Impact/Goals: {{business_goals}}
+    - Company Context: {{company_context}}
+    - Variant: {{variant}}          # external / internal / both
+    - Length: {{jd_length}}         # short / standard / detailed
+
+    Output exactly in this markdown structure:
+
+    **{{job_title}}**  
+    {{location_remote}} • {{employment_type}}
+
+    ### Role Summary
+    (3–5 sentences)
+
+    ### Key Responsibilities
+    (6–10 bullets max)
+
+    ### Required Qualifications
+    **Must-have**
+    • …
+
+    **Experience**
+    (realistic summary)
+
+    ### Preferred Skills
+    • … (omit if empty)
+
+    ### Tools & Technologies
+    • … (omit if empty)
+
+    ### Collaboration
+    Reports to {reporting_line} and works closely with…
+
+    ### Growth Opportunities
+    (only if context provided)
+
+    ### Quality Checklist
+    - Clarity: high/medium/needs work
+    - Realism: high/medium/overloaded
+    - Inclusivity: high/medium/flags
+    - Red flags: • …
+
+    Rules:
+    • Default external tone unless variant=internal
+    • Flag unrealistic/contradictory inputs in checklist
+    • No salary/benefits unless given
+    • ATS & mobile friendly (simple markdown)
+
+inputs:
+  - name: job_title
+    type: text
+    required: true
+  - name: seniority_level
+    type: text
+    required: true
+  - name: employment_type
+    type: text
+    required: true
+  - name: location_remote
+    type: text
+    required: true
+  - name: reporting_line
+    type: text
+    required: false
+  - name: core_responsibilities
+    type: textarea
+    required: true
+  - name: must_have_skills
+    type: textarea
+    required: true
+  - name: nice_to_have_skills
+    type: textarea
+    required: false
+  - name: tools_technologies
+    type: textarea
+    required: false
+  - name: experience_expectations
+    type: text
+    required: false
+  - name: business_goals
+    type: textarea
+    required: false
+  - name: company_context
+    type: textarea
+    required: false
+  - name: variant
+    type: select
+    required: true
+  - name: jd_length
+    type: select
+    required: true
+metadata:
+  author: promptstash
+  version: 1.0
+  last_updated: 2026-02-06
+favorite: false
