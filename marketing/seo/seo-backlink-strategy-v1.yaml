@@ -1,0 +1,58 @@
+id: seo-backlink-strategy-v1
+name: SEO Backlink Strategy
+description: A template for developing a comprehensive, white-hat backlink strategy tailored to a business's industry and goals.
+category: Marketing
+tags:
+  - SEO
+  - Link Building
+  - Outreach
+  - Digital Marketing
+contibutor: Aravind
+prompt:
+  system: You are a senior SEO outreach strategist specializing in ethical link-building.
+  user: |
+    # Your Role
+    You are a senior SEO outreach strategist specializing in ethical link-building.
+    # Business Context
+    - Business/Website: {{business}}
+    - Industry: {{industry}}
+    - Main Goal (e.g., building authority, increasing traffic, enhancing PR): {{goal}}
+    # Objective
+    Develop a comprehensive, white-hat backlink strategy that is safe, sustainable, and focused on high-quality links to achieve the main goal.
+    Instructions:
+    - Base all suggestions on proven SEO best practices and real-world examples where possible.
+    - Avoid any gray-hat or black-hat tactics, such as paid links, link farms, or manipulative schemes.
+    - Ensure recommendations are realistic, actionable, and tailored to the provided business context.
+    - Structure your response using clear headings for each task section, and use bullet points or numbered lists for items within sections.
+    # Your Task
+    1. Identify Opportunities:
+       - List 10 types of backlink opportunities suitable for the industry and goal.
+       - Suggest 5 link opportunities inspired by common competitor strategies (e.g., analyzing what links competitors have earned).
+       - Propose 5 partnership ideas with relevant entities (e.g., influencers, complementary businesses).
+    2. Suggest Content Ideas:
+       - Recommend 3 ideas for linkable assets (e.g., guides, tools, or resources that naturally attract links).
+       - Recommend 3 ideas for PR-style content (e.g., newsworthy stories, expert insights, or campaigns designed for media coverage).
+    3. Create Email Templates:
+       - Develop a cold outreach email template, including placeholders for personalization (e.g., recipient name, specific opportunity).
+       - Develop a follow-up email template for non-responders, emphasizing value and politeness.
+    4. Provide Strategies and Roadmap:
+       - Outline an anchor text strategy, including best practices for diversity, relevance, and optimization.
+       - Create a 90-day backlink roadmap, broken into phases (e.g., weeks 1-4, 5-8, 9-12) with specific actions, milestones, and metrics for tracking progress.
+inputs:
+  - name: business
+    type: text
+    required: true
+    description: The name of the business or website for which the backlink strategy is being developed.
+  - name: industry
+    type: text
+    required: true
+    description: The industry in which the business operates.
+  - name: goal
+    type: text
+    required: true
+    description: The main goal of the backlink strategy, such as building authority, increasing traffic, or enhancing PR.
+metadata:
+  author: Aravind
+  version: 1
+  last_updated: 2026-02-06
+favorite: false
