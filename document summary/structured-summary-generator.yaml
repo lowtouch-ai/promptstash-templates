@@ -1,5 +1,5 @@
-id: "document-summary-generator-1.0"
-name: "Document Summary Generator"
+id: "structured-document-summary-generator-1.0"
+name: "Structured Document Summary Generator"
 description: Creates a concise, scannable, decision-oriented summary of any document (email, policy, report, contract, notes etc.) focusing strictly on explicit content in five structured sections, tailored to reader role and purpose.
 category: Document Analysis
 tags:
