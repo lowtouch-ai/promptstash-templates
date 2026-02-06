@@ -17,7 +17,6 @@ prompt:
     Generate a synthetic dataset with the following specifications, ensuring all requirements are met and clearly documented in the metadata.
 
     # Specifications
-
     • Dataset Purpose: {{dataset_purpose}}
     • Domain / Use Case: {{domain}}
     • Data Schema: {{data_schema}}
@@ -44,14 +43,14 @@ prompt:
        - Explicit privacy & safety compliance statement
     3. Optional but recommended: 5-row anonymized preview table (markdown format)
 
-    # Notes
+    # Strict Rules to follow
     • Strictly follow the schema definition (types, ranges, dependencies, constraints)
     • Enforce the requested statistical distributions, correlations, trends and class imbalance
     • Include the specified edge/rare/anomaly/adversarial cases (aim for ≈5–15% coverage unless otherwise stated)
     • Use only synthetic, non-re-identifiable values (no real names, IDs, emails, phone numbers, addresses…)
     • Favor domain-plausible realism over completely uniform random values
     • If any requirements appear to conflict, note them clearly in the metadata section
-    •If any input is ambiguous, underspecified or missing: Document the ambiguity,Choose a reasonable, defensible default
+    • If any input is ambiguous, underspecified or missing: Document the ambiguity,Choose a reasonable, defensible default
 inputs:
   - name: dataset_purpose
     type: text
